@@ -14,28 +14,9 @@ import {
   CardContent,
   CardHeader
 } from "@/components/ui/card"
+import { fetchLatestGuesses } from "./lib/data";
 
-
-const guesses = [
-  {
-    username: "scubasav",
-    guess: "Smooth-Santana. This one was tough.",
-    correct: true,
-    beatDate: "2022-01-08"
-  },
-  {
-    username: "cedarbread_",
-    guess: "Smooth by Santana",
-    correct: true,
-    beatDate: "2022-01-08"
-  },
-  {
-    username: "nnettworth",
-    guess: "Oh yes lemme just think back to watching the Grammys when I was TWO",
-    correct: false,
-    beatDate: "2022-01-08"
-  }
-];
+const guesses = await fetchLatestGuesses();
 
 
 export default function Home() {
@@ -54,7 +35,6 @@ export default function Home() {
             />
           </CardHeader>
           <CardContent>
-            <br />
             <br />
             <Table className="w-full">
               <TableCaption>
@@ -76,7 +56,7 @@ export default function Home() {
                   <TableHead className="flex justify-center items-center font-bold">CORRECT?</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody className="text-lg">
+              <TableBody className="text-md">
                 {guesses.map((guess) => (
                   <TableRow key={guess.username}>
                     <TableCell className="font-large">{guess.username}</TableCell>
@@ -95,12 +75,6 @@ export default function Home() {
                   </TableRow>
                 ))}
               </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell colSpan={2}>total guesses</TableCell>
-                  <TableCell className="text-center">3</TableCell>
-                </TableRow>
-              </TableFooter>
             </Table>
           </CardContent>
         </Card>
