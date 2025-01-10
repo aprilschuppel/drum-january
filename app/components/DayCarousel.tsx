@@ -20,7 +20,8 @@ const videos = [
   { day: 6, videoId: "fOflCv3RdiU" },
   { day: 7, videoId: "R5cFMQE5SdQ" },
   { day: 8, videoId: "0t7NWfRaDq8" },
-  { day: 9, videoId: "LrtxOnu3DW8" }
+  { day: 9, videoId: "LrtxOnu3DW8" },
+  { day: 10, videoId: "Hfm94aHAbYQ" },
 ];
 
 export default function DayCarousel() {
