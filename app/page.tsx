@@ -35,7 +35,7 @@ export default function Home() {
             <br />
             <div className="flex justify-center w-full">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/LrtxOnu3DW8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
