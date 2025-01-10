@@ -20,10 +20,10 @@ const guesses = await fetchLatestGuesses();
 
 export default function Home() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
-      <div className="flex w-full max-w-[75%] flex-col gap-6">
+    <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-2 md:p-10">
+      <div className="flex w-full md:max-w-[50%] sm:w-full flex-col gap-6">
         <Card className="w-full">
-          <CardHeader>
+          <CardHeader className="text-center">
             <br />
             <Image className="self-center"
               aria-hidden
@@ -32,9 +32,21 @@ export default function Home() {
               width={200}
               height={200}
             />
+            <br />
+            <div className="flex justify-center w-full">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full max-w-[560px] h-48 md:h-64 lg:h-96"
+              ></iframe>
+            </div>
+            <br />
+            Day 8 had {guesses.length} guesses!
+            <br />
           </CardHeader>
           <CardContent>
-            <br />
             <Table className="w-full">
               <TableCaption>
                 <br />
@@ -47,30 +59,31 @@ export default function Home() {
                 <br/>For 2025, Drum January has evolved to a daily guessing game. Each day, she plays a beat and gives people 24 hours to guess what song it&apos;s from. The following day, the previous day&apos;s song is revealed and a new beat is posted.
                 <br/>
                 <br/>To play along, follow April on Instagram at <a href="https://www.instagram.com/schupsss/">@schupsss</a> or YouTube at <a href="https://www.youtube.com/@aprilschuppel">@aprilschuppel</a>.
+                <br/>
               </TableCaption>
               <TableHeader className="text-md">
                 <TableRow >
+                  <TableHead></TableHead>
                   <TableHead className="font-bold">USERNAME</TableHead>
                   <TableHead className="font-bold">GUESS</TableHead>
-                  <TableHead className="flex justify-center items-center font-bold">CORRECT?</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody className="text-md">
                 {guesses.map((guess) => (
                   <TableRow key={guess.username}>
+                  <TableCell>
+                    {guess.correct ? (
+                      <span aria-label="correct" role="img">
+                        🤘
+                      </span>
+                    ) : (
+                      <span aria-label="incorrect" role="img">
+                        👎
+                      </span>
+                    )}
+                  </TableCell>
                     <TableCell className="font-large">{guess.username}</TableCell>
                     <TableCell>{guess.guess}</TableCell>
-                    <TableCell className="flex justify-center items-center">
-                      {guess.correct ? (
-                        <span aria-label="correct" role="img">
-                          🤘
-                        </span>
-                      ) : (
-                        <span aria-label="incorrect" role="img">
-                          👎
-                        </span>
-                      )}
-                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
