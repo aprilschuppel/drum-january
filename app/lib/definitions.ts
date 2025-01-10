@@ -1,9 +1,5 @@
-export type Guess = {
-    id: number;
-    beatId: number;
-    beatDate: string;
+export type GuessTableRow = {
     username: string;
     guess: string;
-    platform: string;
-    correct: "TRUE" | "FALSE";
-  };
+    correct: boolean;
+};

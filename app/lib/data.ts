@@ -1,25 +1,27 @@
-import { db } from '@vercel/postgres';
-import { Guess } from './definitions';
+import { sql } from '@vercel/postgres';
+import { GuessTableRow } from './definitions';
 
-
-export async function fetchLatestGuesses() {
+export async function fetchDailyGuesses({day = 8}: {day?: number} = {}) {
   try {
-    const client = await db.connect();
-    
-    const data = await client.sql<Guess>`
-      SELECT *
+    const data = await sql<GuessTableRow>`
+      SELECT 
+        username,
+        STRING_AGG(guess, ' - ') AS guess,
+        BOOL_OR(correct) AS correct
       FROM guesses
-      WHERE "beatId" = 8
+      WHERE "beatId" = ${day}
+      GROUP BY username
       ORDER BY username ASC;
-      `;
-
-    const latestGuesses = data.rows.map((guess) => ({
-      ...guess
+    `;
+    
+    const guesses = data.rows.map((guess) => ({
+      ...guess,
+      guess: guess.guess.replace(/&apos;/g, "'")
     }));
-    return latestGuesses;
 
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch the latest guesses.');
+    return guesses;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error(`Failed to fetch the day ${day} guesses.`);
   }
-};
+}
