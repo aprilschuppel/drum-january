@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-export const dynamic = "force-dynamic";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import {
   Carousel,
