@@ -1,7 +1,7 @@
 import { sql } from '@vercel/postgres';
-import { GuessTableRow } from './definitions';
+import { GuessTableRow, Video } from './definitions';
 
-export async function fetchDailyGuesses({day = 8}: {day?: number} = {}) {
+export async function fetchDailyGuesses({day}: {day?: number} = {}) {
   try {
     const data = await sql<GuessTableRow>`
       SELECT 
@@ -23,5 +23,23 @@ export async function fetchDailyGuesses({day = 8}: {day?: number} = {}) {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error(`Failed to fetch the day ${day} guesses.`);
+  }
+}
+
+export async function fetchVideos() {
+  try {
+    const data = await sql<Video>`
+      SELECT * FROM videos;
+    `;
+    
+    const videos = data.rows.map((video) => ({
+      ...video,
+      video: video.songName ? video.songName.replace(/&apos;/g, "'"): null
+    }));
+
+    return videos;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error(`Failed to fetch videos.`);
   }
 }

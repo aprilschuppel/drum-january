@@ -1,6 +1,6 @@
 "use server";
 
-import { Table, TableCaption, TableHeader, TableRow, TableHead, TableBody, TableCell } from "./ui/table";
+import { Table, TableCaption, TableRow, TableBody, TableCell } from "./ui/table";
 import { fetchDailyGuesses } from "../lib/data";
 
 interface DailyGuessesProps {
@@ -11,7 +11,7 @@ export default async function DailyGuesses({ day }: DailyGuessesProps) {
     const guesses = await fetchDailyGuesses({ day });
 
     return (
-        <Table>
+        <Table className="w-full">
             <TableCaption>
                 Day {day} had {guesses.length} guesses!
                 <br />
@@ -25,13 +25,6 @@ export default async function DailyGuesses({ day }: DailyGuessesProps) {
                 <br />To play along, follow April on Instagram at <a href="https://www.instagram.com/schupsss/">@schupsss</a> or YouTube at <a href="https://www.youtube.com/@aprilschuppel">@aprilschuppel</a>.
                 <br />
             </TableCaption>
-            <TableHeader className="text-md">
-                <TableRow >
-                    <TableHead></TableHead>
-                    <TableHead className="font-bold">USERNAME</TableHead>
-                    <TableHead className="font-bold">GUESS</TableHead>
-                </TableRow>
-            </TableHeader>
             <TableBody className="text-md">
                 {guesses.map((guess) => (
                     <TableRow key={guess.username}>
@@ -46,8 +39,7 @@ export default async function DailyGuesses({ day }: DailyGuessesProps) {
                                 </span>
                             )}
                         </TableCell>
-                        <TableCell className="font-large">{guess.username}</TableCell>
-                        <TableCell>{guess.guess}</TableCell>
+                        <TableCell><div className="font-bold">{guess.username}</div>{guess.guess}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>
