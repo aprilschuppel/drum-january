@@ -1,6 +1,6 @@
 "use server";
 
-import { Table, TableCaption, TableHeader, TableRow, TableHead, TableBody, TableCell } from "./ui/table";
+import { Table, TableCaption, TableRow, TableBody, TableCell } from "./ui/table";
 import { fetchDailyGuesses } from "../lib/data";
 
 interface DailyGuessesProps {
