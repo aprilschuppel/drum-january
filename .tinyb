@@ -1,0 +1,13 @@
+{
+    "host": "https://api.us-east.aws.tinybird.co",
+    "id": "df38e251-bc64-46b5-864a-8981fbb788df",
+    "name": "drum_january",
+    "scope": "user",
+    "token": "p.eyJ1IjogImRmMzhlMjUxLWJjNjQtNDZiNS04NjRhLTg5ODFmYmI3ODhkZiIsICJpZCI6ICI4ZTY4NGQ2NC1kMDM3LTRlMWQtYmNjNC1jMWMxOWFkYTE0ZGQiLCAiaG9zdCI6ICJ1cy1lYXN0LWF3cyJ9.LuW1rwcEUOGTJNLUDjUwnoxEs4mob4ep5eC7SERJd1c",
+    "tokens": {
+        "https://api.us-east.aws.tinybird.co": "p.eyJ1IjogImRmMzhlMjUxLWJjNjQtNDZiNS04NjRhLTg5ODFmYmI3ODhkZiIsICJpZCI6ICI4ZTY4NGQ2NC1kMDM3LTRlMWQtYmNjNC1jMWMxOWFkYTE0ZGQiLCAiaG9zdCI6ICJ1cy1lYXN0LWF3cyJ9.LuW1rwcEUOGTJNLUDjUwnoxEs4mob4ep5eC7SERJd1c"
+    },
+    "user_email": "aprilschuppel@gmail.com",
+    "user_id": "0c69384b-9f34-4e68-a5c0-e0e625554520",
+    "version": "5.13.2"
+}
