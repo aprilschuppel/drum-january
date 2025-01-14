@@ -51,14 +51,14 @@ export async function createGuess(
 
   // Prepare data for insertion into the database
   const { username, guess } = validatedFields.data;
-  const date = new Date().toISOString().split('T')[0];
 
   // Create a Guess object using the extracted data and user input
   const guessData: Guess = {
     beatId: beatId,
     beatDate: beatDate,
     username: username as string, // Type assertion for username
-    guess: guess as string       // Type assertion for guess
+    guess: guess as string,       // Type assertion for guess
+    platform: platform
   };
   console.log('Guess data:', guessData); // Debugging statement
 

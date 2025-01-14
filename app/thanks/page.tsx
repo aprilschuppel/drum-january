@@ -7,7 +7,7 @@ export default function Page() {
             <Card>
                     <CardHeader className="justify-center items-center">
                         <CardTitle className="text-xl">Thanks for submitting!</CardTitle>
-                        <CardDescription><br/>Check back for the reveal and tomorrow's challenge.</CardDescription>
+                        <CardDescription><br/>Check back for the reveal and tomorrow&apos;s challenge.</CardDescription>
                     </CardHeader>
                     <CardContent>
                     <Link key='home' href='/' className="flex h-2 mb-2 grow items-center justify-center p-3 text-blue-700 text-center">  
