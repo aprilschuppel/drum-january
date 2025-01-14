@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import DailyGuesses from "./DailyGuesses";
 import { fetchVideos } from '../lib/data';
+import { GuessInput } from './GuessInput';
 
 const videos = await fetchVideos();
 
@@ -53,6 +54,8 @@ export default function DayCarousel() {
                     index + 1 === videos.length ? (
                       <>
                         <p className="top font-bold">There&apos;s still time to guess Day {index + 1}&apos;s beat!</p>
+                        <br />
+                        <div className="w-2/3 justify-center self-center"><GuessInput beatId={index + 1} beatDate={`2025-01-${index + 1}`} platform='DJ App' /></div>
                         <br />
                         <hr />
                         <br />
