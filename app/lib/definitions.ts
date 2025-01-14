@@ -16,3 +16,20 @@ export type Video = {
     releaseYear: number;
     peakOnBillboardChart: number;
 }
+
+export type User = {
+    id: string;
+    name: string;
+    username: string;
+    platform: string;
+    email: string;
+    password: string;
+  };
+
+export type Guess = {
+    beatId: number;
+    beatDate: string;
+    username: string;
+    guess: string;
+    platform: string;
+}
