@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import NavBar from "./components/NavBar";
+import { SiteFooter } from "./components/Footer";
 export const metadata: Metadata = {
   title: "Drum January",
   description: "April Schuppel's annual daily drumming challenge.",
@@ -13,10 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-100">
-        <div className="container mx-auto p-4">
-          {children}
-        </div>
+      <body className="min-h-screen bg-palette-sunset-900 mt-24">
+        <NavBar />
+        <div className="py-4">{children}</div>
+        <SiteFooter />
       </body>
     </html>
   );
