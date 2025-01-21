@@ -1,21 +1,46 @@
-'use client'
+"use client";
 
-import { BarList } from '@tinybirdco/charts'
+import { BarList } from "@tinybirdco/charts";
+import { Table } from "@tinybirdco/charts";
 
-export function DrumJanuaryLeaderboard() {
+export function GuessLeaders() {
   return (
     <BarList
       endpoint={`${process.env.NEXT_PUBLIC_TB_BASE_URL}/v0/pipes/guess_leaderboard.json`}
-      token = {process.env.NEXT_PUBLIC_TB_GUESS_LEADERBOARD_TOKEN}
+      token={process.env.NEXT_PUBLIC_TINYBIRD_TOKEN}
       index="username"
-      categories={['wins']}
-      colorPalette={['#FFB05C', 'FFB05C', '#0EB1B9', '#9263AF', '#5A6FC0', '#86BFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1', '064789']}
-      borderRadius="5px"
+      categories={["wins"]}
+      colorPalette={[
+        "#fed19c"
+      ]}
+      borderRadius="4px"
+      borderColor="#064789"
       fontSize="12px"
       fontFamily="Helvetica"
       textColor="#100F0D"
-      height="400px"
+      height="300px"
       padding="10px"
+      title="Guess Leaders"
     />
-  )
+  );
+}
+
+export function GenreLeaders(params: { genre?: string }) {
+  return (
+    <Table
+      endpoint={`${process.env.NEXT_PUBLIC_TB_BASE_URL}/v0/pipes/genre_leaderboard.json`}
+      token={process.env.NEXT_PUBLIC_TINYBIRD_TOKEN}
+      categories={["leaders"]}
+      title={params.genre}
+      height="300px"
+      params={params}
+      borderRadius="4px"
+      borderColor="#064789"
+      fontSize="12px"
+      fontFamily="Helvetica"
+      textColor="#100F0D"
+      padding="10px"
+      
+    />
+  );
 }
