@@ -5,7 +5,7 @@ import { Card } from "../components/ui/card";
 
 export default function SongStatsPage() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full content-center place-content-center justify-center flex items-center">
       <Card className="bg-white w-11/12 justify-self-center h-auto space-y-2 overflow-scroll p-2">
         <h3 className="mb-1 font-bold">Song Stats</h3>
         <DataTable columns={columns} data={songs} />
