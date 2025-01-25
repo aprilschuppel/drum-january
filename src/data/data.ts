@@ -190,31 +190,23 @@ export const trackerData: TrackerData[] = [
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 22,
+    value: 23,
   },
   {
     name: "shortofadime",
-    value: 20,
+    value: 21,
   },
   {
     name: "mgattoni15",
-    value: 17,
+    value: 18,
   },
   {
     name: "peetydraws",
-    value: 16,
-  },
-  {
-    name: "elainegamolo",
-    value: 15,
-  },
-  {
-    name: "rebeccillama",
-    value: 15,
+    value: 17,
   },
   {
     name: "erinnbenedict",
-    value: 15,
+    value: 16,
   },
 ];
 
@@ -547,17 +539,17 @@ export const songs: Song[] = [
     releaseDecade: "1980s",
     hot100Peak: 7,
   },
-  // {
-  //   day: 23,
-  //   song: "Beautiful Things",
-  //   artist: "Benson Boone",
-  //   drummer: "Eric Downs",
-  //   broadGenre: "Alternative",
-  //   genre: "Alternative rock, post-grunge, pop rock, power pop",
-  //   totalGuesses: 7,
-  //   correctGuesses: 0,
-  //   releaseYear: 2024,
-  //   releaseDecade: "2020s",
-  //   hot100Peak: 2,
-  // },
+  {
+    day: 23,
+    song: "Beautiful Things",
+    artist: "Benson Boone",
+    drummer: "Eric Downs",
+    broadGenre: "Alternative",
+    genre: "Alternative rock, post-grunge, pop rock, power pop",
+    totalGuesses: 11,
+    correctGuesses: 11,
+    releaseYear: 2024,
+    releaseDecade: "2020s",
+    hot100Peak: 2,
+  },
 ];
