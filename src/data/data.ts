@@ -177,6 +177,14 @@ export const trackerData: TrackerData[] = [
     tooltip: "95.24",
     status: "Great",
   },
+  {
+    beatId: 23,
+    songTitle: "Beautiful Things",
+    correctGuesses: 11,
+    totalGuesses: 11,
+    tooltip: "100.00",
+    status: "Perfect",
+  },
   //   {
   //     beatId: 23,
   //     songTitle: "Beautiful Things",
