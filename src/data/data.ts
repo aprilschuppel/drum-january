@@ -185,6 +185,14 @@ export const trackerData: TrackerData[] = [
     tooltip: "100.00",
     status: "Perfect",
   },
+  {
+    beatId: 24,
+    songTitle: "24K Magic",
+    correctGuesses: 9,
+    totalGuesses: 11,
+    tooltip: "81.81",
+    status: "Good"
+  }
   //   {
   //     beatId: 23,
   //     songTitle: "Beautiful Things",
@@ -198,7 +206,7 @@ export const trackerData: TrackerData[] = [
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 23,
+    value: 24,
   },
   {
     name: "shortofadime",
@@ -206,7 +214,7 @@ export const overallGuessLeaderData: Leaderboard[] = [
   },
   {
     name: "mgattoni15",
-    value: 18,
+    value: 19,
   },
   {
     name: "peetydraws",
@@ -214,8 +222,16 @@ export const overallGuessLeaderData: Leaderboard[] = [
   },
   {
     name: "erinnbenedict",
-    value: 16,
+    value: 17,
   },
+  {
+    name: "elainegamolo",
+    value: 15
+  },
+  {
+    name: "rebeccillama",
+    value: 15
+  }
 ];
 
 export const decades: Basic[] = [
@@ -560,4 +576,17 @@ export const songs: Song[] = [
     releaseDecade: "2020s",
     hot100Peak: 2,
   },
+  {
+    day: 24,
+    song: "24K Magic",
+    artist: "Bruno Mars",
+    drummer: "The Stereotypes (Producers)",
+    broadGenre: "R&B",
+    genre: "Funk, disco, R&B",
+    totalGuesses: 11,
+    correctGuesses: 9,
+    releaseYear: 2016,
+    releaseDecade: "2010s",
+    hot100Peak: 4
+  }
 ];
