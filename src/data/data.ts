@@ -192,15 +192,15 @@ export const trackerData: TrackerData[] = [
     totalGuesses: 11,
     tooltip: "81.81",
     status: "Good"
-  }
-  //   {
-  //     beatId: 23,
-  //     songTitle: "Beautiful Things",
-  //     correctGuesses: 0,
-  //     totalGuesses: 7,
-  //     tooltip: "0.00",
-  //     status: "Bad",
-  //   },
+  },
+    {
+      beatId: 25,
+      songTitle: "Touch Me",
+      correctGuesses: 7,
+      totalGuesses: 10,
+      tooltip: "70.00",
+      status: "Bad",
+    },
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
@@ -214,23 +214,15 @@ export const overallGuessLeaderData: Leaderboard[] = [
   },
   {
     name: "mgattoni15",
-    value: 19,
+    value: 20,
+  },
+  {
+    name: "erinnbenedict",
+    value: 18,
   },
   {
     name: "peetydraws",
     value: 17,
-  },
-  {
-    name: "erinnbenedict",
-    value: 17,
-  },
-  {
-    name: "elainegamolo",
-    value: 15
-  },
-  {
-    name: "rebeccillama",
-    value: 15
   }
 ];
 
@@ -588,5 +580,18 @@ export const songs: Song[] = [
     releaseYear: 2016,
     releaseDecade: "2010s",
     hot100Peak: 4
+  },
+  {
+    day: 25,
+    song: "Touch Me",
+    artist: "The Doors",
+    drummer: "John Densmore",
+    broadGenre: "Rock",
+    genre: "Soul, proto-prog, symphonic rock",
+    totalGuesses: 10,
+    correctGuesses: 7,
+    releaseYear: 1968,
+    releaseDecade: "1960s",
+    hot100Peak: 3
   }
 ];
