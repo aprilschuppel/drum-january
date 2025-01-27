@@ -1,6 +1,6 @@
 export function SiteFooter() {
   return (
-    <footer className="bg-palette-polynesian_blue-900 flex justify-center items-center mt-auto">
+    <footer className="bg-palette-polynesian_blue-900 flex justify-center items-center mt-auto bottom-0">
        <p className='text-center text-wrap text-xs p-4 '>
           Drum January is an annual daily drumming challenge by April Schuppel.
           In years past, April has just performed a full drum cover or original
