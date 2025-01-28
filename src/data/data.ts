@@ -201,24 +201,32 @@ export const trackerData: TrackerData[] = [
       tooltip: "70.00",
       status: "Bad",
     },
+    {
+      beatId: 26,
+      songTitle: "D'yer Mak'er",
+      correctGuesses: 11,
+      totalGuesses: 11,
+      tooltip: "100.00",
+      status: "Perfect",
+    },
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 24,
+    value: 25,
   },
   {
     name: "shortofadime",
-    value: 21,
+    value: 22,
   },
   {
     name: "mgattoni15",
-    value: 20,
+    value: 21,
   },
   {
     name: "erinnbenedict",
-    value: 18,
+    value: 19,
   },
   {
     name: "peetydraws",
@@ -593,5 +601,18 @@ export const songs: Song[] = [
     releaseYear: 1968,
     releaseDecade: "1960s",
     hot100Peak: 3
+  },
+  {
+    day: 26,
+    song: "D'yer Mak'er",
+    artist: "Led Zeppelin",
+    drummer: "John Bonham",
+    broadGenre: "Rock",
+    genre: "Reggae rock",
+    totalGuesses: 11,
+    correctGuesses: 11,
+    releaseYear: 1973,
+    releaseDecade: "1970s",
+    hot100Peak: 20
   }
 ];
