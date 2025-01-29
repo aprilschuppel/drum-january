@@ -209,28 +209,36 @@ export const trackerData: TrackerData[] = [
       tooltip: "100.00",
       status: "Perfect",
     },
+    {
+      beatId: 27,
+      songTitle: "Feel Good Inc.",
+      correctGuesses: 14,
+      totalGuesses: 15,
+      tooltip: "93.33",
+      status: "Great"
+    }
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 25,
+    value: 26,
   },
   {
     name: "shortofadime",
-    value: 22,
+    value: 23,
   },
   {
     name: "mgattoni15",
-    value: 21,
+    value: 22,
   },
   {
     name: "erinnbenedict",
-    value: 19,
+    value: 20,
   },
   {
     name: "peetydraws",
-    value: 17,
+    value: 18,
   }
 ];
 
@@ -614,5 +622,18 @@ export const songs: Song[] = [
     releaseYear: 1973,
     releaseDecade: "1970s",
     hot100Peak: 20
+  },
+  {
+    day: 27,
+    song: "Feel Good Inc.",
+    artist: "Gorillaz",
+    drummer: "Russel Hobbs",
+    broadGenre: "Alternative",
+    genre: "Alternative rock, electronic, trip hop, art pop, funk",
+    totalGuesses: 15,
+    correctGuesses: 14,
+    releaseYear: 2005,
+    releaseDecade: "2000s",
+    hot100Peak: 14
   }
 ];
