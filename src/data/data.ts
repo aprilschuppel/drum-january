@@ -216,29 +216,37 @@ export const trackerData: TrackerData[] = [
       totalGuesses: 15,
       tooltip: "93.33",
       status: "Great"
+    },
+    {
+      beatId: 28,
+      songTitle: "I'm Coming Out",
+      correctGuesses: 11,
+      totalGuesses: 13,
+      tooltip: "84.62",
+      status: "Good"
     }
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 26,
+    value: 27,
   },
   {
     name: "shortofadime",
-    value: 23,
+    value: 24,
   },
   {
     name: "mgattoni15",
-    value: 22,
+    value: 23,
   },
   {
     name: "erinnbenedict",
-    value: 20,
+    value: 21,
   },
   {
     name: "peetydraws",
-    value: 18,
+    value: 19,
   }
 ];
 
@@ -635,5 +643,18 @@ export const songs: Song[] = [
     releaseYear: 2005,
     releaseDecade: "2000s",
     hot100Peak: 14
+  },
+  {
+    day: 28,
+    song: "I'm Coming Out",
+    artist: "Diana Ross",
+    drummer: "Tony Thompson",
+    broadGenre: "Pop",
+    genre: "Disco, funk, soul",
+    totalGuesses: 11,
+    correctGuesses: 13,
+    releaseYear: 1980,
+    releaseDecade: "1980s",
+    hot100Peak: 5
   }
 ];
