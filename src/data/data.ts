@@ -224,17 +224,25 @@ export const trackerData: TrackerData[] = [
       totalGuesses: 13,
       tooltip: "84.62",
       status: "Good"
+    },
+    {
+      beatId: 29,
+      songTitle: "Greek Tragedy",
+      correctGuesses: 5,
+      totalGuesses: 6,
+      tooltip: "83.33",
+      status: "Good"
     }
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 27,
+    value: 28,
   },
   {
     name: "shortofadime",
-    value: 24,
+    value: 25,
   },
   {
     name: "mgattoni15",
@@ -242,7 +250,7 @@ export const overallGuessLeaderData: Leaderboard[] = [
   },
   {
     name: "erinnbenedict",
-    value: 21,
+    value: 22,
   },
   {
     name: "peetydraws",
@@ -656,5 +664,18 @@ export const songs: Song[] = [
     releaseYear: 1980,
     releaseDecade: "1980s",
     hot100Peak: 5
+  },
+  {
+    day: 29,
+    song: "Greek Tragedy",
+    artist: "The Wombats",
+    drummer: "Dan Haggis",
+    broadGenre: "Alternative",
+    genre: "Alternative rock, Indie pop, synthpop",
+    totalGuesses: 6,
+    correctGuesses: 5,
+    releaseYear: 2015,
+    releaseDecade: "2010s",
+    hot100Peak: 0
   }
 ];
