@@ -232,17 +232,25 @@ export const trackerData: TrackerData[] = [
       totalGuesses: 6,
       tooltip: "83.33",
       status: "Good"
+    },
+    {
+      beatId: 30,
+      songTitle: "What You Know",
+      correctGuesses: 12,
+      totalGuesses: 12,
+      tooltip: "100.00",
+      status: "Perfect"
     }
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 28,
+    value: 29,
   },
   {
     name: "shortofadime",
-    value: 25,
+    value: 26,
   },
   {
     name: "mgattoni15",
@@ -254,7 +262,11 @@ export const overallGuessLeaderData: Leaderboard[] = [
   },
   {
     name: "peetydraws",
-    value: 19,
+    value: 20,
+  },
+  {
+    name: "qbrossay",
+    value: 20,
   }
 ];
 
@@ -675,6 +687,19 @@ export const songs: Song[] = [
     totalGuesses: 6,
     correctGuesses: 5,
     releaseYear: 2015,
+    releaseDecade: "2010s",
+    hot100Peak: 0
+  },
+  {
+    day: 30,
+    song: "What You Know",
+    artist: "Two Door Cinema Club",
+    drummer: "Ben Thompson",
+    broadGenre: "Alternative",
+    genre: "Indie rock, post-punk revival, dance-punk, new wave",
+    totalGuesses: 12,
+    correctGuesses: 12,
+    releaseYear: 2011,
     releaseDecade: "2010s",
     hot100Peak: 0
   }
