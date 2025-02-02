@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import DailyGuesses from "./DailyGuesses";
 import { fetchVideos } from "../lib/data";
-import { GuessInput } from "./GuessInput";
 
 const videos = await fetchVideos();
 

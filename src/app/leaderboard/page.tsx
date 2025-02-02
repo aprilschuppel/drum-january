@@ -6,7 +6,6 @@ import {
 } from "../components/LeaderboardComponents";
 import { Card } from "../components/ui/card";
 
-import TestPage from "../test/page";
 
 export default function LeaderboardPage() {
   return (
