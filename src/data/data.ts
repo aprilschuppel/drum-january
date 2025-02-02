@@ -1,4 +1,4 @@
-import { TrackerData, Leaderboard, Basic, Song } from "./schema";
+import { BarChart, TrackerData, Leaderboard, Basic, Song, YearGuess, DecadeGuess } from "./schema";
 
 export const trackerData: TrackerData[] = [
   {
@@ -240,33 +240,37 @@ export const trackerData: TrackerData[] = [
       totalGuesses: 12,
       tooltip: "100.00",
       status: "Perfect"
+    },
+    {
+      beatId: 31,
+      songTitle: "We Will Rock You",
+      correctGuesses: 30,
+      totalGuesses: 31,
+      tooltip: "96.77",
+      status: "Great"
     }
 ];
 
 export const overallGuessLeaderData: Leaderboard[] = [
   {
     name: "scubasav144",
-    value: 29,
+    value: 30,
   },
   {
     name: "shortofadime",
-    value: 26,
+    value: 27,
   },
   {
-    name: "mgattoni15",
-    value: 23,
-  },
-  {
-    name: "erinnbenedict",
-    value: 22,
+    name: "erinnbenedict / mgattoni15",
+    value: 24,
   },
   {
     name: "peetydraws",
-    value: 20,
+    value: 22,
   },
   {
-    name: "qbrossay",
-    value: 20,
+    name: "elainegamolo / qbrossay",
+    value: 21,
   }
 ];
 
@@ -350,7 +354,7 @@ export const songs: Song[] = [
     correctGuesses: 5,
     releaseYear: 1992,
     releaseDecade: "1990s",
-    hot100Peak: null,
+    hot100Peak: 0,
   },
   {
     day: 4,
@@ -506,7 +510,7 @@ export const songs: Song[] = [
     correctGuesses: 18,
     releaseYear: 1992,
     releaseDecade: "1990s",
-    hot100Peak: null,
+    hot100Peak: 0,
   },
   {
     day: 16,
@@ -571,7 +575,7 @@ export const songs: Song[] = [
     correctGuesses: 14,
     releaseYear: 1996,
     releaseDecade: "1990s",
-    hot100Peak: null,
+    hot100Peak: 0,
   },
   {
     day: 21,
@@ -702,5 +706,264 @@ export const songs: Song[] = [
     releaseYear: 2011,
     releaseDecade: "2010s",
     hot100Peak: 0
+  },
+  {
+    day: 31,
+    song: "We Will Rock You",
+    artist: "Queen",
+    drummer: "Roger Taylor",
+    broadGenre: "Rock",
+    genre: "Arena rock",
+    totalGuesses: 31,
+    correctGuesses: 30,
+    releaseYear: 1977,
+    releaseDecade: "1970s",
+    hot100Peak: 52
   }
 ];
+
+
+export const yearGuesses: YearGuess[] = [{
+  releaseYear: 1968,
+  numSongs: 1,
+  avgTotalGuesses: 10,
+  avgCorrectGuesses: 7,
+  avgHot100peak: 3
+}, {
+  releaseYear: 1969,
+  numSongs: 1,
+  avgTotalGuesses: 8,
+  avgCorrectGuesses: 7,
+  avgHot100peak: 1
+}, {
+  releaseYear: 1973,
+  numSongs: 1,
+  avgTotalGuesses: 11,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 20
+}, {
+  releaseYear: 1975,
+  numSongs: 1,
+  avgTotalGuesses: 14,
+  avgCorrectGuesses: 14,
+  avgHot100peak: 10
+}, {
+  releaseYear: 1977,
+  numSongs: 1,
+  avgTotalGuesses: 29,
+  avgCorrectGuesses: 28,
+  avgHot100peak: 52
+}, {
+  releaseYear: 1980,
+  numSongs: 1,
+  avgTotalGuesses: 13,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 5
+}, {
+  releaseYear: 1985,
+  numSongs: 1,
+  avgTotalGuesses: 14,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 1
+}, {
+  releaseYear: 1987,
+  numSongs: 2,
+  avgTotalGuesses: 20,
+  avgCorrectGuesses: 18,
+  avgHot100peak: 4
+}, {
+  releaseYear: 1992,
+  numSongs: 2,
+  avgTotalGuesses: 12,
+  avgCorrectGuesses: 12,
+  avgHot100peak: 0
+}, {
+  releaseYear: 1996,
+  numSongs: 1,
+  avgTotalGuesses: 15,
+  avgCorrectGuesses: 14,
+  avgHot100peak: 0
+}, {
+  releaseYear: 1998,
+  numSongs: 1,
+  avgTotalGuesses: 16,
+  avgCorrectGuesses: 15,
+  avgHot100peak: 53
+}, {
+  releaseYear: 1999,
+  numSongs: 3,
+  avgTotalGuesses: 13,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 23
+}, {
+  releaseYear: 2000,
+  numSongs: 1,
+  avgTotalGuesses: 13,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 4
+}, {
+  releaseYear: 2002,
+  numSongs: 1,
+  avgTotalGuesses: 19,
+  avgCorrectGuesses: 14,
+  avgHot100peak: 10
+}, {
+  releaseYear: 2003,
+  numSongs: 1,
+  avgTotalGuesses: 10,
+  avgCorrectGuesses: 10,
+  avgHot100peak: 87
+}, {
+  releaseYear: 2004,
+  numSongs: 2,
+  avgTotalGuesses: 21,
+  avgCorrectGuesses: 19,
+  avgHot100peak: 16
+}, {
+  releaseYear: 2005,
+  numSongs: 2,
+  avgTotalGuesses: 22,
+  avgCorrectGuesses: 20,
+  avgHot100peak: 11
+}, {
+  releaseYear: 2006,
+  numSongs: 2,
+  avgTotalGuesses: 19,
+  avgCorrectGuesses: 18,
+  avgHot100peak: 24
+}, {
+  releaseYear: 2007,
+  numSongs: 1,
+  avgTotalGuesses: 15,
+  avgCorrectGuesses: 13,
+  avgHot100peak: 26
+}, {
+  releaseYear: 2011,
+  numSongs: 1,
+  avgTotalGuesses: 13,
+  avgCorrectGuesses: 13,
+  avgHot100peak: 0
+}, {
+  releaseYear: 2015,
+  numSongs: 1,
+  avgTotalGuesses: 6,
+  avgCorrectGuesses: 5,
+  avgHot100peak: 0
+}, {
+  releaseYear: 2016,
+  numSongs: 1,
+  avgTotalGuesses: 11,
+  avgCorrectGuesses: 9,
+  avgHot100peak: 4
+}, {
+  releaseYear: 2019,
+  numSongs: 1,
+  avgTotalGuesses: 12,
+  avgCorrectGuesses: 9,
+  avgHot100peak: 18
+}, {
+  releaseYear: 2024,
+  numSongs: 1,
+  avgTotalGuesses: 11,
+  avgCorrectGuesses: 11,
+  avgHot100peak: 2
+}]
+
+
+export const decadeGuesses: DecadeGuess[] = [{
+  decade: "1960s",
+  songs: 2,
+  totalGuesses: 18,
+  correctGuesses: 14,
+  avgGuesses: 9,
+  avgCorrect: 7,
+  accuracy: 77.78
+}, {
+  decade: "1970s",
+  songs: 3,
+  totalGuesses: 55,
+  correctGuesses: 54,
+  avgGuesses: 18,
+  avgCorrect: 18,
+  accuracy: 98.18
+}, {
+  decade: "1980s",
+  songs: 4,
+  totalGuesses: 67,
+  correctGuesses: 58,
+  avgGuesses: 16,
+  avgCorrect: 14,
+  accuracy: 86.57
+}, {
+  decade: "1990s",
+  songs: 7,
+  totalGuesses: 94,
+  correctGuesses: 85,
+  avgGuesses: 13,
+  avgCorrect: 12,
+  accuracy: 90.43
+}, {
+  decade: "2000s",
+  songs: 10,
+  totalGuesses: 179,
+  correctGuesses: 160,
+  avgGuesses: 17,
+  avgCorrect: 16,
+  accuracy: 89.39
+}, {
+  decade: "2010s",
+  songs: 4,
+  totalGuesses: 42,
+  correctGuesses: 36,
+  avgGuesses: 10,
+  avgCorrect: 9,
+  accuracy: 85.71
+}, {
+  decade: "2020s",
+  songs: 1,
+  totalGuesses: 11,
+  correctGuesses: 11,
+  avgGuesses: 11,
+  avgCorrect: 11,
+  accuracy: 100.00
+}]
+
+
+export const billboardGuesses: BarChart[] = [
+  {
+    index: "Top 10",
+    songs: 17,
+    totalGuesses: 266,
+    correctGuesses: 232,
+    avgGuesses: 15,
+    avgCorrect: 13,
+    accuracy: 87.22
+  },
+  {
+    index: "Top 40",
+    songs: 6,
+    totalGuesses: 93,
+    correctGuesses: 84,
+    avgGuesses: 15,
+    avgCorrect: 14,
+    accuracy: 90.32
+  },
+  {
+    index: "Top 100",
+    songs: 4,
+    totalGuesses: 65,
+    correctGuesses: 61,
+    avgGuesses: 16,
+    avgCorrect: 15,
+    accuracy: 93.85
+  },
+  {
+    index: "Outside Top 100",
+    songs: 4,
+    totalGuesses: 42,
+    correctGuesses: 41,
+    avgGuesses: 10,
+    avgCorrect: 10,
+    accuracy: 97.62
+  }
+]

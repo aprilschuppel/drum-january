@@ -32,3 +32,39 @@ export type Song = {
   releaseDecade: string,
   hot100Peak: number | null
 }
+
+export type YearGuess = {
+  releaseYear: number,
+  numSongs: number,
+  avgTotalGuesses: number,
+  avgCorrectGuesses: number,
+  avgHot100peak: number
+}
+
+export type DecadeGuess = {
+  decade: string,
+  songs: number,
+  totalGuesses: number,
+  correctGuesses: number,
+  avgGuesses: number,
+  avgCorrect: number,
+  accuracy: number
+}
+
+export type Billboard = {
+  range: string,
+  numSongs: number,
+  avgGuesses: number,
+  avgCorrect: number,
+  accuracy: number
+}
+
+export type BarChart = {
+  index: string,
+  songs: number,
+  totalGuesses: number,
+  correctGuesses: number,
+  avgGuesses: number,
+  avgCorrect: number,
+  accuracy: number
+}
