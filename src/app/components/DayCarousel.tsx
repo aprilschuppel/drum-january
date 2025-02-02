@@ -26,20 +26,38 @@ export default function DayCarousel() {
           >
             <Card className="h-auto">
               <CardHeader className="text-center text-palette-polynesian_blue-200">
-                <div className="text-2xl">
-                  Welcome to Day {videos[index].beatId}!
-                </div>
-                {index === 0 ? (
-                  <p className="text-sm">
-                    Here&apos;s the first video of Drum January 2025!
-                  </p>
-                ) : (
-                  <p className="text-sm">
-                    Here&apos;s the reveal of Day {videos[index].beatId - 1}
-                    &apos;s song and Day {videos[index].beatId}&apos;s beat to
-                    guess!
-                  </p>
-                )}
+                {
+                  index === videos.length - 1 ? (
+                    <><div className="text-2xl">
+                    Thanks for tuning in to Drum January 2025!
+                  </div>
+                        <p className="text-sm">
+                          While the game is over, the videos and results are still available for you to enjoy!
+                        </p></>
+                  ) : (
+                    index === 0 ? (
+                      <>
+                        <div className="text-2xl">
+                          Welcome to Day {videos[index].beatId}!
+                        </div>
+                        <p className="text-sm">
+                          Here&apos;s the first video of Drum January 2025!
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <div className="text-2xl">
+                          Welcome to Day {videos[index].beatId}!
+                        </div>
+                        <p className="text-sm">
+                          Here&apos;s the reveal of Day {videos[index].beatId - 1}
+                          &apos;s song and Day {videos[index].beatId}&apos;s beat to
+                          guess!
+                        </p>
+                      </>
+                    )
+                  )
+                }
 
                 {/* video */}
                 <div className="flex justify-center w-full">
@@ -51,9 +69,10 @@ export default function DayCarousel() {
                     className="w-full max-w-[960px] aspect-video"
                   ></iframe>
                 </div>
-                <br/>
-                
+                <br />
+
                 {/* guess box */}
+{/*                 
                 {index + 1 === videos.length ? (
                   <>
                     <p className="top font-bold mt-2">
@@ -70,9 +89,7 @@ export default function DayCarousel() {
                     <br />
                     <br />
                   </>
-                ) : (
-                  null
-                )}
+                ) : null} */}
               </CardHeader>
               {index + 1 === videos.length ? null : (
                 <CardContent className="flex aspect-square  mt-0 overflow-y-auto">

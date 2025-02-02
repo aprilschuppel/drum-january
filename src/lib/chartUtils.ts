@@ -3,17 +3,17 @@
 export type ColorUtility = "bg" | "stroke" | "fill" | "text"
 
 export const chartColors = {
-  blue: {
-    bg: "bg-blue-500",
-    stroke: "stroke-blue-500",
-    fill: "fill-blue-500",
-    text: "text-blue-500",
+  jade: {
+    bg: "bg-palette-jade",
+    stroke: "stroke-palette-jade-500",
+    fill: "fill-palette-jade-500",
+    text: "text-palette-jade-500",
   },
-  emerald: {
-    bg: "bg-emerald-500",
-    stroke: "stroke-emerald-500",
-    fill: "fill-emerald-500",
-    text: "text-emerald-500",
+  blue: {
+    bg: "bg-palette-polynesian_blue-500",
+    stroke: "stroke-palette-polynesian_blue-500",
+    fill: "fill-palette-polynesian_blue-500",
+    text: "text-palette-polynesian_blue-500",
   },
   violet: {
     bg: "bg-violet-500",
@@ -105,3 +105,24 @@ export const getYAxisDomain = (
   return [minDomain, maxDomain]
 }
 
+
+
+// Tremor hasOnlyOneValueForKey [v0.1.0]
+
+export function hasOnlyOneValueForKey(
+  array: any[],
+  keyToCheck: string,
+): boolean {
+  const val: any[] = []
+
+  for (const obj of array) {
+    if (Object.prototype.hasOwnProperty.call(obj, keyToCheck)) {
+      val.push(obj[keyToCheck])
+      if (val.length > 1) {
+        return false
+      }
+    }
+  }
+
+  return true
+}
