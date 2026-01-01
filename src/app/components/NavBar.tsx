@@ -1,6 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
 import {
   Disclosure,
   DisclosureButton,
@@ -81,6 +83,17 @@ export default function NavBar() {
                   </a>
                 ))}
               </div>
+            </div>
+            <div>
+              {/* Show this if user is logged OUT */}
+              <SignedOut>
+                <SignInButton mode="modal" />
+              </SignedOut>
+              
+              {/* Show this if user is logged IN */}
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
           </div>
         </div>
