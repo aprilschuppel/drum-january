@@ -1,4 +1,4 @@
-import { auth, currentUser } from "@clerk/nextjs/server";
+import { auth} from "@clerk/nextjs/server";
 import { sql } from "@vercel/postgres";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { submitGuess, fetchCurrentVideo } from "../actions";
