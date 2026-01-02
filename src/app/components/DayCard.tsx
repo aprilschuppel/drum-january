@@ -25,7 +25,7 @@ export function DayCard({
       <h2 className="font-bold text-2xl mb-2">Results</h2>
       <div className="mb-1">
         🎵 The song was:{" "}
-        <b className="text-palette-polynesian_blue">{video.songName}</b>
+        <b className="text-palette-polynesian_blue">{video.songName.replace(/&apos;/g, "'")}</b>
       </div>
     </div>
   );

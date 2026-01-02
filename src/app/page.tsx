@@ -1,16 +1,15 @@
 import { auth } from "@clerk/nextjs/server";
 import { fetchVideosForYear, fetchUserGuesses } from "./lib/data";
 import { VideoCarousel } from "./components/VideoCarousel";
+import { UserGuess } from "./lib/definitions";
 
 export default async function DrumChallenge() {
   const { userId } = await auth();
   const videos = await fetchVideosForYear(2026);
-  console.log(videos)
 
-  let userGuesses: any[] = [];
+  let userGuesses: UserGuess[] = [];
   if (userId) {
     userGuesses = await fetchUserGuesses(userId);
-    console.log(userGuesses)
   }
 
   return (
