@@ -4,6 +4,13 @@ export type GuessTableRow = {
     correct: boolean;
 };
 
+export type UserGuess = {
+    id: number;
+    user_id: string;
+    song_name: string;
+    video_id: number
+}
+
 export type Video = {
     id: number;
     beatId: number;
