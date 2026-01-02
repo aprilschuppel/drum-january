@@ -1,5 +1,5 @@
 import { sql } from "@vercel/postgres";
-import { GuessTableRow, Video } from "./definitions";
+import { GuessTableRow, Video, UserGuess } from "./definitions";
 
 export async function fetchDailyGuesses({ day }: { day?: number } = {}) {
   try {
@@ -44,26 +44,38 @@ export async function fetchVideos() {
   }
 }
 
-export async function fetchData(endpoint: string) {
-  const token = process.env.NEXT_PUBLIC_TINYBIRD_TOKEN;
-
-  const url = `${process.env.NEXT_PUBLIC_TB_BASE_URL}/v0/pipes/${endpoint}.json?&token=${token}`;
-
+export async function fetchVideosForYear(year: number) {
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
+    const data = await sql<Video>`
+      SELECT * FROM videos WHERE EXTRACT(YEAR FROM "postDate") = ${year};
+    `;
 
-    const json = await response.json();
-    const data = json.data;
-    console.log(data);
-    if (Array.isArray(data)) {
-      return data;
-    } else {
-      console.log('Unexpected data format for genre leaders');
-    }
-  } catch (error) {
-    console.error('Error fetching genre leaders:', error);
+    const videos = data.rows.map((video) => ({
+      ...video,
+      video: video.songName ? video.songName.replace(/&apos;/g, "'") : null,
+    }));
+
+    return videos;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error(`Failed to fetch videos.`);
+  }
+}
+
+export async function fetchUserGuesses(userId: string) {
+  try {
+    const data = await sql<UserGuess>`
+      SELECT * FROM user_guesses WHERE user_id = ${userId};
+    `;
+
+    const guesses = data.rows.map((guess) => ({
+      ...guess,
+      guess: guess.song_name ? guess.song_name.replace(/&apos;/g, "'") : null,
+    }));
+
+    return guesses;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error(`Failed to fetch videos.`);
   }
 }
