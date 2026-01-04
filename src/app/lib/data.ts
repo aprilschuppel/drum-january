@@ -47,7 +47,7 @@ export async function fetchVideos() {
 export async function fetchVideosForYear(year: number) {
   try {
     const data = await sql<Video>`
-      SELECT * FROM videos WHERE EXTRACT(YEAR FROM "postDate") = ${year};
+      SELECT * FROM videos WHERE EXTRACT(YEAR FROM "postDate") = ${year} ORDER BY "beatId" ASC;
     `;
 
     const videos = data.rows.map((video) => ({

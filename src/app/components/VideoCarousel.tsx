@@ -12,15 +12,16 @@ interface VideoCarouselProps {
   videos: Video[];
   userGuesses: UserGuess[];
     isArchive?: boolean;
+    startIndex?: number;
 }
 
-export function VideoCarousel({ videos, userGuesses, isArchive = false }: VideoCarouselProps) {
+export function VideoCarousel({ videos, userGuesses, isArchive = false, startIndex }: VideoCarouselProps) {
   const latestVideoCount = videos.length;
 
   return (
     <Carousel
       className="w-full max-w-[960px]"
-      opts={{ startIndex: Math.max(0, latestVideoCount - 1), loop: true }}
+      opts={{ startIndex: startIndex, loop: true }}
     >
       <CarouselContent>
         {videos.map((video) => {

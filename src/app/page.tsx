@@ -18,6 +18,7 @@ export default async function DrumChallenge() {
          videos={videos} 
          userGuesses={userGuesses}
          isArchive={false}
+         startIndex={videos.length - 1}
        />
     </main>
   );
